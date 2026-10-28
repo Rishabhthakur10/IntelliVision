@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliVision | AI Powered Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/app_logo.png') }}" alt="IntelliVision Logo" style="height: 32px;">
+            <div class="logo-text">IntelliVision</div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#journey">Teacher Flow</a>
+            <a href="#student-journey">Student Portal</a>
+            <a href="#tech">Tech Stack</a>
+        </div>
+        <div class="nav-cta">
+            <a href="http://localhost:8501" target="_blank" class="btn-pill">Launch AI Attendance <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M9 5l7 7-7 7" />
+                </svg></a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">
+            Next-Gen Biometrics & Computer Vision
+        </div>
+
+        <h1>IntelliVision<br>Attendance <span>System</span></h1>
+
+        <p>Revolutionizing classroom management with automated facial recognition and computer vision. Developed to make student identification instantaneous, accurate, and completely frictionless.</p>
+
+        <div class="hero-actions">
+            <a href="http://localhost:8501" target="_blank" class="btn-cta">Launch Application <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3">
+                    <path d="M9 5l7 7-7 7" />
+                </svg></a>
+            <a href="#journey" class="link-action">Explore Architecture</a>
+        </div>
+
+        <div class="floating-card card-left">
+            <div class="card-img"><img
+                    src="{{ url_for('static', filename='img/demo/snap-teacher-flow-5.2-photo-attendance.png') }}"
+                    alt="IntelliVision Face Attendance"></div>
+        </div>
+
+        <div class="floating-card card-right">
+            <div class="card-img"><img src="{{ url_for('static', filename='img/demo/snap-landing.png') }}"
+                    alt="IntelliVision Landing Preview"></div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Key AI Capabilities</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="f-icon-box">📸</div>
+                <h3>Automated Face Recognition</h3>
+                <p>128-dimensional deep facial embeddings and SVM classification recognize students from full classroom photos in seconds.</p>
+            </div>
+            <div class="feature-card">
+                <div class="f-icon-box">🎙️</div>
+                <h3>Voice Biometric Roll-Call</h3>
+                <p>Optional acoustic speaker verification matches vocal patterns against stored acoustic embeddings during sequential check-in.</p>
+            </div>
+            <div class="feature-card">
+                <div class="f-icon-box">📱</div>
+                <h3>QR & Code Fast Enrollment</h3>
+                <p>Dynamic QR codes and course join codes allow instant student roster self-enrollment without tedious manual entry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="teacher-flow">
+        <div class="flow-container">
+            <div class="section-tag" style="text-align: center; display: block; margin-bottom: 40px;">— Workflow —</div>
+            <h2 style="text-align: center; font-size: 3.5rem; margin-bottom: 80px;">The Instructor's Journey</h2>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 01</span>
+                    <h3>Secure Authentication</h3>
+                    <p>Log in through the encrypted teacher portal or register a new instructor profile with role-based access control.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-1-login.png') }}"
+                        alt="Instructor Authentication">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 02</span>
+                    <h3>Command Dashboard</h3>
+                    <p>Manage all your subjects, track student counts, and inspect historical attendance rates from an intuitive control center.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-2-dashboard.png') }}"
+                        alt="Command Dashboard">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 03</span>
+                    <h3>Course Creation & QR Sharing</h3>
+                    <p>Create subjects in seconds and generate instant QR codes and shareable links for fast classroom enrollment.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-3-create-course.png') }}"
+                        alt="Course Management">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 04</span>
+                    <h3>Computer Vision Face Attendance</h3>
+                    <p>Capture or upload classroom photos. Our AI localizes every student, matches embeddings, and displays verification overlays.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-5.2-photo-attendance.png') }}"
+                        alt="Face Attendance Overlay">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 05</span>
+                    <h3>Voice Attendance Backup</h3>
+                    <p>Record classroom roll call audio. Biometric audio encoders verify student presence sequentially.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-5.1-voice-attendance.png') }}"
+                        alt="Voice Attendance">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Step 06</span>
+                    <h3>Exportable Analytics & Reports</h3>
+                    <p>Review session summaries, track absent vs present metrics, and download complete CSV audit reports.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-teacher-flow-5-see-stored-records.png') }}"
+                        alt="Analytics and Reports">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-stack">
+        <div class="section-tag">— System Architecture —</div>
+        <h2>Production Tech Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">⚡</div>
+                    <div class="tech-info">
+                        <h4>Streamlit & Python</h4>
+                        <p>High-performance reactive frontend with real-time UI components and state management.</p>
+                    </div>
+                    <span class="tech-tag">Frontend & Logic</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">👁️</div>
+                    <div class="tech-info">
+                        <h4>OpenCV & Dlib</h4>
+                        <p>Deep facial localization and 128-D facial vector extraction with Scikit-Learn classification.</p>
+                    </div>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">💾</div>
+                    <div class="tech-info">
+                        <h4>SQLite & Supabase</h4>
+                        <p>Zero-configuration local SQLite persistence with seamless cloud database failover.</p>
+                    </div>
+                    <span class="tech-tag">Database</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="t-icon">📊</div>
+                    <div class="tech-info">
+                        <h4>Pandas & Segno</h4>
+                        <p>Dynamic QR code generation and automated analytical reporting with CSV exports.</p>
+                    </div>
+                    <span class="tech-tag">Data Engine</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="student-journey" class="teacher-flow" style="background: white;">
+        <div class="flow-container">
+            <div class="section-tag" style="text-align: center; display: block; margin-bottom: 40px;">— Workflow —</div>
+            <h2 style="text-align: center; font-size: 3.5rem; margin-bottom: 80px;">The Student's Experience</h2>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 01</span>
+                    <h3>Instant FaceID Check-In</h3>
+                    <p>Students present their face to the camera for immediate recognition. No cards or pin numbers required.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-student-flow-1-login.png') }}"
+                        alt="Student Face Login">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 02</span>
+                    <h3>Biometric Self-Enrollment</h3>
+                    <p>New students register their facial vector once. The system trains the classification model on-the-fly.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-student-flow-2-enroll.png') }}"
+                        alt="Student Enrollment">
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content">
+                    <span class="step-badge">Phase 03</span>
+                    <h3>Student Progress Portal</h3>
+                    <p>Check enrolled subjects, monitor attendance percentage against eligibility rules, and view log dates.</p>
+                </div>
+                <div class="flow-image">
+                    <img src="{{ url_for('static', filename='img/demo/snap-student-flow-3-dashboard.png') }}"
+                        alt="Student Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="purple-section">
+        <h2>Deploy IntelliVision in Your Institution</h2>
+        <p>Automate student identification, eliminate proxy attendance, and save valuable lecture time with AI Computer Vision.</p>
+        <a href="http://localhost:8501" target="_blank" class="btn-white">Launch Streamlit App</a>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='img/app_logo.png') }}" alt="IntelliVision Logo">
+                    <div class="logo-text">IntelliVision</div>
+                </div>
+                <p>IntelliVision — Attendance System with AI. Developed with Python, Streamlit, Computer Vision, and Scikit-Learn.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">AI Attendance</a></li>
+                    <li><a href="#features">FaceID Verification</a></li>
+                    <li><a href="#tech">Tech Stack</a></li>
+                    <li><a href="#student-journey">Student Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Experience</h4>
+                <ul>
+                    <li><a href="#journey">Teacher Journey</a></li>
+                    <li><a href="#student-journey">Student Journey</a></li>
+                    <li><a href="#features">Voice Roll-Call</a></li>
+                    <li><a href="#features">Live Camera Scan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Architecture</h4>
+                <ul>
+                    <li><a href="#">Python 3.13</a></li>
+                    <li><a href="#">Streamlit Dashboard</a></li>
+                    <li><a href="#">OpenCV & Dlib</a></li>
+                    <li><a href="#">SQLite Persistence</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 IntelliVision — AI Powered Automated Attendance System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
